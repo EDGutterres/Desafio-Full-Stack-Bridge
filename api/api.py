@@ -9,7 +9,7 @@ CORS(app)
 @cross_origin()
 def calculate():
     if request.method == 'POST':
-        number = int(request.args.get('number', None))
+        number = int(request.json.get('number'))
         if number:
             divList = [i for i in range(1, number + 1) if number % i == 0]
             isPrime = (True if len(divList) == 2 else False)
