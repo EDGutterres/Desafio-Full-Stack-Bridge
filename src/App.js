@@ -1,59 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "", playerName: "" };
+function App() {
+  const [todos, setTodos] = useState(null);
+  const [value, setValue] = useState('');
+  
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    console.log("making request");
-    fetch("/calculate", {
-      method: "POST",
-      cache: "no-cache",
+  function handleSubmit(e) {
+    e.preventDefault();
+    const data = { divList: value, isPrime: value};
+    
+    fetch('/calculate', {
+      method: 'POST',
       headers: {
-        content_type: "application/json"
+        'Content-type': 'application/json',
       },
-      body: JSON.stringify(this.state.value)
+      body: JSON.stringify(data),
     })
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        this.setState({ playerName: json[0] });
-      });
+      .then(res => res.json())
+      .then(res => console.log("kk" + res));
   }
 
-  render() {
-    return (
-      <div>
-        <form
-          onSubmit={this.handleSubmit}
-          action="http://localhost:5000/calculate"
-          method="get"
-        >
-          <label>
-            Insira um número:<br/>
-            <input type="text" name="number" /><br/>
-            <input
-              type="submit"
-              onChange={this.handleChange}
-              value={this.state.value}
-            />
-          </label>
-        </form>
-        <h3> Lista de divisores: {this.state.playerName} </h3>
-      </div>
-    );
+  function handleValue(e) {
+    setValue(e.target.value);
   }
+  return (
+    <section id="app">
+      <form action="" onSubmit={handleSubmit}>
+        <input type="number" onChange={handleValue} />
+        <button> submit </button>
+      </form>
+    </section>
+  );
 }
-
 export default App;
