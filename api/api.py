@@ -5,7 +5,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/calculate', methods=['GET', 'POST'])
+@app.route('/calculate', methods=['POST'])
 @cross_origin()
 def calculate():
     if request.method == 'POST':
@@ -13,5 +13,5 @@ def calculate():
         if number:
             divList = [i for i in range(1, number + 1) if number % i == 0]
             isPrime = (True if len(divList) == 2 else False)
-
             return {'divList': divList, 'isPrime': isPrime}
+        return "Insira um numero válido"
