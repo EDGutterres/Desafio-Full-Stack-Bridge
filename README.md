@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Desafio Dev. Full Stack Bridge
 
-## Available Scripts
+## Desafio:
+Crie um web app que através de um formulário simples, submeta um número e mostre a lista de divisores desse número e se o mesmo é um número primo.<br>
+● O sistema deve possuir uma tela com um campo de texto e um botão.<br>
+● Ao clicar no botão, os dados devem ser enviados ao ​ backend ​ para os cálculos.<br>
+● O resultado deve ser exibido na tela.<br>
 
-In the project directory, you can run:
+### Restrições técnicas:
 
-### `yarn start`
+●Os cálculos dos divisores e do número primo devem ser executados pelo ​ backend​.<br>
+●Estilize as páginas utilizando a ferramenta/biblioteca CSS de sua preferência. Nós julgaremos a usabilidade das telas e componentes.<br>
+●Crie um README explicando as tecnologias e principais bibliotecas utilizadas em sua solução.<br>
+●Adicione também diretivas de como executar seu projeto localmente.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Como executar o projeto localmente
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Para a execução do projeto, deve-se primeiramente instalar o node e o yarn em sua máquina:<br>
 
-### `yarn test`
+`sudo apt install nodejs`<br>
+`sudo apt install yarn`<br>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Depois, deve-se clonar o conteúdo deste repositório em uma pasta qualquer:<br>
 
-### `yarn build`
+`git clone https://github.com/EDGutterres/Desafio-Full-Stack-Bridge.git`<br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Por fim, dentro da pasta em que o repositório foi clonado, abrir duas abas do terminal e executar os seguintes comandos (um em cada aba):<br>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`yarn start-api`<br>
+`yarn start`<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A partir daí, a aplicação deve estar funcionando, e é possível acessá-la através do http://localhost:3000
 
-### `yarn eject`
+## Tecnologias utilizadas:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Front End:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para o Front End foi utilizado o ReactJS, sendo ele inicializado através do create-react-app. Também foi incluída a biblioteca semantic-ui-react para auxílio na estilização.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Back End:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+O Back End foi feito utilizando a liguagem Python através do framework Flask, que recebe a requisição do Front End e realiza os cálculos, enviando o resultado de volta para o Front End.
 
-## Learn More
+### Ambiente de desenvolvimento:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+O ambiente em que a aplicação foi desenvolvida foi no sistema operacional Ubuntu 18.04.4 LTS, utilizando o Visual Studio Code como ferramenta de código e o terminal do Ubuntu para execução de comandos.
