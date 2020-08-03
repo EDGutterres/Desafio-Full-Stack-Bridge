@@ -1,4 +1,4 @@
-# Desafio Dev. Full Stack Bridge
+# Desafio Dev. Full Stack
 
 ## Desafio:
 Crie um web app que através de um formulário simples, submeta um número e mostre a lista de divisores desse número e se o mesmo é um número primo.<br>
@@ -22,7 +22,7 @@ Para a execução do projeto, deve-se primeiramente instalar o node e o yarn em 
 
 Depois, deve-se clonar o conteúdo deste repositório em uma pasta qualquer:<br>
 
-`git clone https://github.com/EDGutterres/Desafio-Full-Stack-Bridge.git`<br>
+`git clone https://github.com/EDGutterres/Desafio-Full-Stack.git`<br>
 
 Por fim, dentro da pasta em que o repositório foi clonado, abrir duas abas do terminal e executar os seguintes comandos (um em cada aba):<br>
 
